@@ -1,12 +1,13 @@
 # solis-multiplexer
 
-The Solis wifi datalogger communicates with the monitored inverter over RS485+modbus. 
+The Solis wifi datalogger communicates with the monitored inverter over RS485+modbus. The lastest dataloggers no longer have any sideband network access.
 DIY interaction with the inverter over RS485 requires one of:
  * disconnecting the datalogger entirely
- * sharing the connection and accepting that sometimes there will be traffic collisions and data corruption
+ * sharing the connection and accepting that sometimes there will be traffic collisions.
  * using some form of abritration to prevent collisions.
 
 This document describes how to do the third option using a Raspberry Pi interposed between datalogger and inverter.
+Another option is to use a dual-master modbus hub (eg https://www.aliexpress.com/item/1005006080040402.html ).
 
 ## Operating Principle
 
