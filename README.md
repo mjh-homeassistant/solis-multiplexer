@@ -15,6 +15,8 @@ Software running on the Pi forwards traffic from the datalogger to the inverter 
 The Pi can also originate messages to the inverter, which will not be seen by the datalogger.
 If both the datalogger and the Pi try to communicate at the same time, one will be delayed until the other has completed.
 
+![Picture of Pi cabling](/passthrough.png)
+
 ## Bill of Materials
 
  * 1x A Raspberry Pi (I used a 4B)
