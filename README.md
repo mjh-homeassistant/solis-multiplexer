@@ -54,4 +54,16 @@ If both the datalogger and the Pi try to communicate at the same time, one will 
  * Plug the RS485 adapters into the powered Pi. Make a note of the device names for each adapter(check the output of `dmesg`). They will be of the form `/dev/ttyUSBx`. It's important to know which faces the inverter and which the datalogger.
  * Plug in the cable to the inverter
  * Plug in the datalogger to the male Exceedcon 
+
+
+## Software
+
  * On the Pi, run `passthrough /dev/ttyUSBx /dev/ttyUSBy` where `ttyUSBx` is that of the datalogger and `ttyUSB1` is that of the inverter.
+   This will log the data sent between datalogger and inverter.
+ * To send commands to the inverter, the relevant tty must be locked using `flock`. For example, to read the inverter state:
+```
+flock -w 5 -x /dev/ttyUSBy  ./inverter_control.py
+```
+
+Will block for at most 5 seconds, waiting until there is no communication between the datalogger and inverter.
+
