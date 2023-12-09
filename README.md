@@ -23,7 +23,7 @@ If both the datalogger and the Pi try to communicate at the same time, one will 
  * 1x Exceedconn EC04681-2023-BF male/female pair (eg https://www.ebay.co.uk/itm/195668989940 )
  * 1x 120 Ohm resistor (eg https://www.amazon.co.uk/Watt-Carbon-Film-Resistor-Tolerance/dp/B0917XCBNL )
 
-## Tools
+## Tools
 
  * Soldering Iron
  * Solder
@@ -41,10 +41,10 @@ If both the datalogger and the Pi try to communicate at the same time, one will 
  * At each end of the cable, strip the orange and green pairs. The remaining pairs are unused and can be trimmed.
  * Cut and strip the orange pair by the Pi.
  * Solder the following connections at each end of the cable. Male Exceedconn at the datalogger end, Female at the inverter end.
-   * Green: Pin 1
-   * Green+White: Pin
-   * Orange:
-   * Orange+White:
+   * Green: Pin 1   (+5V)
+   * Green+White: Pin 2 (Ground)
+   * Orange: Pin 3 (D+)
+   * Orange+White: Pin 4 (D-)
  * At the interior cuts on the orange pair, solder on pins (use trimmings from the resistor legs)
  * Connect each pair to one of the RS485-USB adapters, Using:
    * Orange: D+
